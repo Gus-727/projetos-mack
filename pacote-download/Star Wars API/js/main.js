@@ -45,9 +45,9 @@ function callAPI(url, callback) {
     xhr.open('GET', url, true); //Abrir a mensagem do protocolo
     xhr.onload = function () { // função que será executada ao carregar a página
         if (xhr.status === 200) {
-            callback(xhr.status, xhr.response)
+            callback(xhr.status, xhr.response);
         } else {
-            alert('Problemas ao conectar com o servidor')
+            alert('Problemas ao conectar com a API: ' + xhr.status);
         }
     }
     xhr.send(); //Manda a resposta
